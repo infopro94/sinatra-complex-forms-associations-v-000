@@ -1,3 +1,5 @@
+require 'pry'
+
 <h1>Create a new Pet</h1>
 
 <form action="/pets" method="POST">
@@ -11,6 +13,7 @@
 
   <%Owner.all.each do |owner|%>
     <input type="checkbox" name="pet[owner_id]"  value="<%=owner.id%>" id="<%=owner.id%>"><%=owner.name%></input>
+    binding.pry
   <%end%>
   <br></br>
   <label>and/or, create a new owner:</label>
